@@ -1,0 +1,4 @@
+/build
+/include/glfw
+/include/glm
+.vscode
