@@ -7,8 +7,9 @@
     #error CompanionX only supports Windows for now!
 #endif
 
-// For static library, define CX_API as empty
+// For static library, define API macros as empty
 #define CX_API
+#define COMPANIONX_API
 
 // If we were building a DLL, we would use this:
 /*
@@ -16,11 +17,14 @@
 #ifdef CX_PLATFORM_WINDOWS
     #ifdef CX_BUILD_DLL
         #define CX_API __declspec(dllexport)
+        #define COMPANIONX_API __declspec(dllexport)
     #else
         #define CX_API __declspec(dllimport)
+        #define COMPANIONX_API __declspec(dllimport)
     #endif
 #else
     #define CX_API
+    #define COMPANIONX_API
 #endif
 */
 

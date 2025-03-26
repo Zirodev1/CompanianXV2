@@ -15,6 +15,7 @@ include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_CURRENT_SOURCE_DIR}/CompanionX
     ${CMAKE_CURRENT_SOURCE_DIR}/CompanionX/src
+    ${CMAKE_CURRENT_SOURCE_DIR}/CompanionX/vendor/spdlog/include
     include/glad 
     include/imgui 
     include/glm
@@ -41,6 +42,7 @@ include_directories("C:/msys64/mingw64/include/assimp")
 # CompanionEngine Library
 add_library(CompanionEngine STATIC
     CompanionX/src/CompanionX/Application.cpp
+    CompanionX/src/CompanionX/Log.cpp
 )
 
 # Add include directories for the engine
@@ -49,6 +51,7 @@ target_include_directories(CompanionEngine
         ${CMAKE_CURRENT_SOURCE_DIR}
         ${CMAKE_CURRENT_SOURCE_DIR}/CompanionX
         ${CMAKE_CURRENT_SOURCE_DIR}/CompanionX/src
+        ${CMAKE_CURRENT_SOURCE_DIR}/CompanionX/vendor/spdlog/include
 )
 
 # Link libraries for CompanionEngine
@@ -72,6 +75,7 @@ target_include_directories(Sandbox
         ${CMAKE_CURRENT_SOURCE_DIR}
         ${CMAKE_CURRENT_SOURCE_DIR}/CompanionX
         ${CMAKE_CURRENT_SOURCE_DIR}/CompanionX/src
+        ${CMAKE_CURRENT_SOURCE_DIR}/CompanionX/vendor/spdlog/include
 )
 
 if(WIN32)

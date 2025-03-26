@@ -6,7 +6,11 @@ extern CompanionX::Application* CompanionX::CreateApplication();
 
 int main(int argc, char** argv)
 {
-    printf("Hello, World!\n");
+    CompanionX::Log::Init();
+    CX_CORE_WARN("Initialized Log!");
+    CX_INFO("Hello from Client!");
+
+
     auto app = CompanionX::CreateApplication();
     app->Run();
     delete app;

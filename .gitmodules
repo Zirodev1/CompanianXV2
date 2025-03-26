@@ -1,0 +1,3 @@
+[submodule "CompanionX/vendor/spdlog"]
+	path = CompanionX/vendor/spdlog
+	url = https://github.com/gabime/spdlog
